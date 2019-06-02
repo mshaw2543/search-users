@@ -22,7 +22,15 @@ angular.module('searchUserApp')
         }
       }
       return false;
-    }
+    };
+
+    this.selectUser = function(name){
+      this.searchText = name;
+    };
+
+    this.selectIndex = function(index){
+      this.selectedIndex = index;
+    };
 
     this.clear = function () {
       this.searchText = '';
@@ -47,7 +55,7 @@ angular.module('searchUserApp')
         if (direction === 'down'){
           parent[0].scrollTop += elem.offset().top - parent.offset().top;
         } else if (direction === 'up' &&  parent.offset().top - elem.offset().top < elem.height()) {
-          parent[0].scrollTop -= elem.height() + (parent.offset().top - elem.offset().top);
+          parent[0].scrollTop -= elem.height() + 20 + (parent.offset().top - elem.offset().top);
         }
       }
     }

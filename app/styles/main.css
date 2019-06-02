@@ -42,3 +42,8 @@ li {
 .search-icon::after {
   content: '\1F50D';
 }
+
+.item-text {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
