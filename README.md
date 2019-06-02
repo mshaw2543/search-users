@@ -4,9 +4,13 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.16.0.
 
 ## Build & development
+  
+  $ npm install
+
+	$ bower install
+
+	$ npm install -g grunt-cli
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Go to http://localhost:9000/#/
