@@ -1,0 +1,44 @@
+ul {
+  list-style: none;
+  max-height: 350px;
+  width: 100%;
+  overflow: auto;
+  padding: 0;
+  border: 1px solid lightgrey;
+}
+li {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.search {
+  width: 350px;
+  margin: 40px auto;
+}
+.selected {
+  background-color: beige;
+}
+.search-input {
+  border: 1px solid lightgrey;
+  position: relative;
+  height: 34px;
+}
+.clear-search{
+  padding: 5px;
+  font-size: large;
+  float: right;
+}
+
+.search-input > input {
+  border: none;
+  padding: 5px;
+  width: calc(100% - 64px);
+  outline: none;
+}
+
+.search-icon {
+  padding: 7px;
+}
+
+.search-icon::after {
+  content: '\1F50D';
+}

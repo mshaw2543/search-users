@@ -1,0 +1,26 @@
+<div class="search">
+    <div class="search-input">
+      <span class="search-icon"></span>
+      <input ng-model="main.searchText" ng-keyup="main.navigate($event)"
+        placeholder="Search users by ID, address, name" autofocus/>
+      <span class="clear-search"
+        ng-click="main.clear()">&#x2715;</span>
+    </div>
+    <ul ng-show="main.searchText">
+      <li ng-repeat="user in main.filtered = (main.users | filter:main.searchText)"
+       ng-click="main.searchText=user.name"
+       ng-class="{selected: $index === main.selectedIndex}"
+       ng-mouseover="main.selectedIndex=$index">
+        <strong>{{user.id}}</strong>
+        <i>
+          <p>{{user.name}}</p>
+        </i>
+        <p class="item-text" ng-show="main.foundInItems(user.items)">"{{main.searchText}}" found in items</p>
+        <p>{{user.address}}</p>
+        <p>{{user.pincode}}</p>
+      </li>
+      <li class="no-user" ng-hide="main.filtered.length">
+          <h4>No User Found</h4>
+        </li>
+    </ul>
+</div>
